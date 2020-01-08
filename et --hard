@@ -1,0 +1,220 @@
+[33mcommit 108bf9392d81dab8120790315a0a017e69f84a59[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: 00TechPriest00 <47656939+00TechPriest00@users.noreply.github.com>
+Date:   Wed Jan 8 02:20:51 2020 +0300
+
+    Update header.hpp
+
+[33mcommit c3c3ee5019cf86becdcfd0de5dddd28dee863442[m
+Author: 00TechPriest00 <james.sayfer2015@yandex.ru>
+Date:   Wed Jan 8 02:09:40 2020 +0300
+
+    finVer
+
+[33mcommit 07a23c94e5beefe3e7d2d6efde74904bc4e800a2[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Tue Nov 6 22:55:50 2018 +0300
+
+    prepared lab-02-cache
+
+[33mcommit 9791f7dab2ffbc996532b2b2e5d097051119552f[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Wed Oct 9 17:51:20 2019 +0000
+
+    updated hunter with gate and polly tools
+
+[33mcommit cc1457eb7ce7bda7c6b11accc0ba0cbfc1fb54e9[m
+Author: drewxa <a.borodin@bmstu.ru>
+Date:   Tue Oct 8 21:16:58 2019 +0300
+
+    update huntergate
+
+[33mcommit cb669daf6786616033dd36c863a604dae34ae1c2[m
+Author: drewxa <a.borodin@bmstu.ru>
+Date:   Tue Sep 24 12:24:31 2019 +0300
+
+    EmptyTest
+    
+    без тестов не проходит скрипт quality
+    А первый курс пока не умеет писать тесты
+
+[33mcommit 31f945651338babb1175669145dbbc40a42c7fce[m
+Author: drewxa <a.borodin@bmstu.ru>
+Date:   Tue Sep 24 11:57:40 2019 +0300
+
+    removed $
+    
+    мешает ctrl+c, ctrl+v
+
+[33mcommit 6f2c03e8b7bf85442cfcc2d80bdd8e239abfa14b[m
+Author: drewxa <a.borodin@bmstu.ru>
+Date:   Tue Sep 24 11:56:20 2019 +0300
+
+    Update .travis.yml
+
+[33mcommit 262e2ee64d478929c83b5c940d7db0614f61fa0f[m
+Author: drewxa <a.borodin@bmstu.ru>
+Date:   Tue Sep 24 11:54:48 2019 +0300
+
+    for using protobot/settings
+    
+    запрещаю пушить в мастер, чтобы студенты не стреляли себе в ноги
+    
+    https://github.com/probot/settings
+
+[33mcommit 97559e7c516e12fa9d11b1a4f71446b59b465feb[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Thu Nov 29 10:32:14 2018 +0300
+
+    Update .travis.yml
+
+[33mcommit d3d23502c276cee6208bafff106c4ce68ab67a36[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Sun Nov 25 21:35:50 2018 +0300
+
+    added symlinks for clang
+
+[33mcommit 87032a726880c2e91f06089678805468291b145d[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Sun Nov 25 00:43:42 2018 +0300
+
+    frozen clang version
+
+[33mcommit d39a4d714dbf56a1cbef1147cb4e8b9af23f2c3b[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Sun Nov 25 00:06:44 2018 +0300
+
+    frozen clang version
+
+[33mcommit ce8e89f1864bf0ad7f4ac2f0776b357cd270326a[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Sat Nov 24 22:14:45 2018 +0300
+
+    fixed duplication report
+
+[33mcommit 6a1f558d08fb44708cd0d2f4ca190b77d7644310[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Fri Nov 23 13:05:54 2018 +0300
+
+    ignored build direcotory
+
+[33mcommit 0328aee53fae5f5ddb979e628b5c19d15b53ddc2[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Fri Nov 23 00:29:03 2018 +0300
+
+    added duplication analysis
+
+[33mcommit 7739762de3f6b43e33d609a45c2f5a65b674de0b[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Wed Nov 21 12:06:04 2018 +0300
+
+    changed docker tag
+
+[33mcommit 7c19f85d80aa6df58f1cde0b08c55e3fc8a860af[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Mon Nov 19 11:38:04 2018 +0300
+
+    enbled ptrace for asan
+
+[33mcommit 36280926a1d069563b9ef16ce49040ea1659bc06[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Mon Nov 19 11:29:15 2018 +0300
+
+    added colorize output
+
+[33mcommit f1262758d8a603bd59a915f7cf205668411c599c[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Sun Nov 18 22:21:02 2018 +0300
+
+    disabled cov grep
+
+[33mcommit eca6df02b99526fa81464c1f9d4e96b22a102eee[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Sun Nov 18 07:01:08 2018 +0000
+
+    fixed santizer run
+
+[33mcommit 7e3cf697e30a9685bdbd82f600dc1b79657ab957[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Thu Nov 15 19:12:15 2018 +0300
+
+    added separate job coverage
+
+[33mcommit 49813b80857f0cd6dd58348f66178dc87d361d58[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Thu Nov 15 14:50:03 2018 +0300
+
+    Update CONTRIBUTING.md
+
+[33mcommit 2fb7019d112e1785545b2bbfa9f5e89e6b983578[m[33m ([m[1;31morigin/template[m[33m)[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Thu Nov 15 14:17:53 2018 +0300
+
+    fixed continue of script run when error
+
+[33mcommit 6d92d88548f60164fb20dd2383decce1ce9094b1[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Mon Nov 12 16:04:04 2018 +0300
+
+    "transfered contributing text in relevant file"
+
+[33mcommit a6f1f3dba9d718d6c0e74c878f513faee4003ab8[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Mon Nov 12 15:59:59 2018 +0300
+
+    "added curl into Dockerfile for coverage"
+
+[33mcommit 1e4630487be2f55aa1f0c3d961f24d4559da7c5f[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Mon Nov 12 15:58:43 2018 +0300
+
+    "transfered env scripts to separate file"
+
+[33mcommit ff7fa128f3f91de55240422d748b24ae0d8ed21e[m
+Author: drewxa <a.borodin@bmstu.ru>
+Date:   Mon Nov 12 15:55:01 2018 +0300
+
+    Добавление покрытия кода в Github Checks (#3)
+    
+    Added coverage repoting into commit message
+
+[33mcommit df7f610d839deaf8afef9f774214829860ee4ea3[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Thu Nov 8 09:47:50 2018 +0300
+
+    disable email notifications
+
+[33mcommit 731fc5b6700d330461edfd29b8371f1dfc79f234[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Wed Nov 7 23:27:16 2018 +0300
+
+    reordered jobs run
+
+[33mcommit 2def48c6198411ac401b0edfa5b08587625bffae[m
+Author: Vyacheslav Vershinin <vyacheslav.vershinin@acronis.com>
+Date:   Wed Nov 7 16:27:05 2018 +0300
+
+    added pic into checks
+
+[33mcommit a3c7f1a1b1a2d5d4de6467ba084e8f7f1a82d72b[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Wed Nov 7 14:09:04 2018 +0300
+
+    Update tests.sh
+
+[33mcommit 7cc7cd51cfa11b2339f48d1ae537f7013bd92f8b[m
+Author: rusdevops <rusdevops@gmail.com>
+Date:   Wed Nov 7 00:35:46 2018 +0300
+
+    added gcc-7-cxx17-pic toolchain
+
+[33mcommit c0ea5f61bdd61c1d4af8452ae189f1cc5cd8a741[m
+Author: drewxa <bo.ro.da@mail.ru>
+Date:   Wed Jan 31 23:52:15 2018 +0300
+
+    prepared temlate repo
+
+[33mcommit 967c54ba4646b8a711759a7606f05fd5468b89d6[m
+Author: drewxa <a.borodin@bmstu.ru>
+Date:   Wed Jan 31 23:50:15 2018 +0300
+
+    Initial commit
