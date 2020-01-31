@@ -14,130 +14,126 @@
 
 using namespace std;
 
-#define		T	char 
-#define		MAX_S	0x1000000 
-#define		L	101 
+#define		T	char
+#define		MAX_S	0x1000000
+#define		L	101
 volatile T A[MAX_S];
 int m_rand[0xFFFFFF];
 
 
 void functionback() {
-	for (size_t j = 0; j < 10; j++) {
-		size_t N = (128 / 4) * pow(2, j) * 1024;
-		int* A = new int[N];
+    for (size_t j = 0; j < 10; j++) {
+        size_t N = (128 / 4) * pow(2, j) * 1024;
+        int* A = new int[N];
 
-		for (int k = N - 1; k > 0; k--) {
-			A[k] = (k - 64) % N;
-		}
-		A[0] = N - 1;
+        for (int k = N - 1; k > 0; k--) {
+            A[k] = (k - 64) % N;
+        }
+        A[0] = N - 1;
 
-		size_t f = 0;
+        size_t f = 0;
 
-		auto start = std::chrono::system_clock::now();
+        auto start = std::chrono::system_clock::now();
 
-
-		for (size_t k = 0; k < 100000; k++) {
-			f = A[f];
-		}
-
+        for (size_t k = 0; k < 100000; k++) {
+            f = A[f];
+        }
 
 
-		auto end = std::chrono::system_clock::now();
+        auto end = std::chrono::system_clock::now();
 
-		auto res = end - start;
-		cout << res.count() << "    " << N * 4 / 1024 << endl;
+        auto res = end - start;
+        cout << res.count() << "    " << N * 4 / 1024 << endl;
 
-		delete[] A;
+        delete[] A;
 
-	}
+    }
 }
 
 
 
 void functionFront() {
-	for (size_t j = 0; j < 10; j++) {
-		size_t N = (128 / 4) * pow(2, j) * 1024;
+    for (size_t j = 0; j < 10; j++) {
+        size_t N = (128 / 4) * pow(2, j) * 1024;
 
 
-		int* A = new int[N];
+        int* A = new int[N];
 
-		for (size_t i = 0; i < N; i++) {
-			A[i] = (i + 64) % N;
+        for (size_t i = 0; i < N; i++) {
+            A[i] = (i + 64) % N;
 
-		}
-		size_t f = 0;
-		auto start = std::chrono::system_clock::now();
-		for (size_t t = 0; t < 10000; t++) {
+        }
+        size_t f = 0;
+        auto start = std::chrono::system_clock::now();
+        for (size_t t = 0; t < 10000; t++) {
 
 
-			f = A[f];
+            f = A[f];
 
-		}
+        }
 
-		auto end = std::chrono::system_clock::now();
+        auto end = std::chrono::system_clock::now();
 
-		auto res = end - start;
-		cout << res.count() << "    " << N * 4 / 1024 << endl;
+        auto res = end - start;
+        cout << res.count() << "    " << N * 4 / 1024 << endl;
 
-		delete[] A;
-	}
+        delete[] A;
+    }
 }
 
 
 
 void functionRandomZapolnenie() {
 
-	LARGE_INTEGER freq; LARGE_INTEGER time1; 	LARGE_INTEGER time2;
-	QueryPerformanceFrequency(&freq);
+    LARGE_INTEGER freq; LARGE_INTEGER time1; 	LARGE_INTEGER time2;
+    QueryPerformanceFrequency(&freq);
 
-	memset((void*)A, 0, sizeof(A));
+    memset((void*)A, 0, sizeof(A));
 
-	srand(time(NULL));
+    srand(time(NULL));
 
-	int v, M;
-	register int i, j, k, m, x;
+    int v, M;
+    register int i, j, k, m, x;
 
-	for (size_t r = 0; r < 12; r++) {
-		size_t k = (128 / 4) * pow(2, r) * 1024;
-		M = k / L;
+    for (size_t r = 0; r < 12; r++) {
+        size_t k = (128 / 4) * pow(2, r) * 1024;
+        M = k / L;
 
-		//printf("%g\t", (k + M * 4) / (1024. * 1024));
+        //printf("%g\t", (k + M * 4) / (1024. * 1024));
 
-		for (i = 0; i < M; i++) m_rand[i] = L * i;
-		for (i = 0; i < M / 4; i++) {
-			j = rand() % M;
-			x = rand() % M;
+        for (i = 0; i < M; i++) m_rand[i] = L * i;
+        for (i = 0; i < M / 4; i++) {
+            j = rand() % M;
+            x = rand() % M;
 
-			m = m_rand[j];
-			m_rand[j] = m_rand[i];
-			m_rand[i] = m;
+            m = m_rand[j];
+            m_rand[j] = m_rand[i];
+            m_rand[i] = m;
+        }
 
-		}
+        if (k < 100 * 1024) j = 1024;
+        else if (k < 300 * 1024) j = 128;
+        else j = 32;
 
-		if (k < 100 * 1024) j = 1024;
-		else if (k < 300 * 1024) j = 128;
-		else j = 32;
+        auto start = chrono::system_clock::now();
+        for (i = 0; i < j; i++) {
 
-		auto start = chrono::system_clock::now();
-		for (i = 0; i < j; i++) {
-
-			for (m = 0; m < L; m++) {
-				for (x = 0; x < M; x++) {
-					v = A[m_rand[x] + m];
-				}
-			}
-
-		}
+            for (m = 0; m < L; m++) {
+                for (x = 0; x < M; x++) {
+                    v = A[m_rand[x] + m];
+                }
+            }
+        }
 
 
-		auto end = std::chrono::system_clock::now();
+        auto end = std::chrono::system_clock::now();
 
-		auto res = end - start;
-		cout << res.count() << "    " << k * 4 / 1024 << endl;
+        auto res = end - start;
+        cout << res.count() << "    " << k * 4 / 1024 << endl;
 
-		//	if (k > 100 * 1024)	k += k / 16;
-		//else			k += 4 * 1024;
-	}
+        //	if (k > 100 * 1024)	k += k / 16;
+        //else			k += 4 * 1024;
+    }
 
 }
 
@@ -146,17 +142,17 @@ void functionRandomZapolnenie() {
 
 
 int main() {
-	srand(time(NULL));
-	//size_t L = pow(2, 2) * 1024;
+    srand(time(NULL));
+    //size_t L = pow(2, 2) * 1024;
 
 
-	functionFront();
-	cout << endl;
-	functionback();
-	cout << endl;
-	functionRandomZapolnenie();
+    functionFront();
+    cout << endl;
+    functionback();
+    cout << endl;
+    functionRandomZapolnenie();
 
 
 
-	return 0;
+    return 0;
 }
