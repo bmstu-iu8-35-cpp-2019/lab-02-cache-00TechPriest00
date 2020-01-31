@@ -1,11 +1,11 @@
 // Copyright 2019 Fedorov james.sayfer2015@yandex.ru
 
-#include	<stdio.h>
-#include	<stdlib.h> 
-#include	<string.h> 
-#include	<time.h> 
-#include	<iostream> 
-#include	<Windows.h> 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <iostream>
+#include <Windows.h>
 #include <chrono>
 #include <vector>
 
